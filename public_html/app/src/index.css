@@ -1,0 +1,82 @@
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 213 45% 5%;
+    --foreground: 210 40% 96%;
+    --card: 213 30% 10%;
+    --card-foreground: 210 40% 96%;
+    --popover: 213 30% 10%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 173 65% 50%;
+    --primary-foreground: 213 45% 5%;
+    --secondary: 213 20% 15%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 213 20% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 37 55% 50%;
+    --accent-foreground: 213 45% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 213 20% 18%;
+    --input: 213 20% 18%;
+    --ring: 173 65% 50%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-deep-navy text-primary-text font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  ::selection {
+    background-color: rgba(45, 212, 191, 0.3);
+    color: #F1F5F9;
+  }
+}
+
+@layer utilities {
+  .text-gradient-teal {
+    background: linear-gradient(135deg, #2DD4BF, #5EEAD4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-amber {
+    background: linear-gradient(135deg, #C8963E, #D4A84A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: rgba(26, 35, 50, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(45, 212, 191, 0.15);
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(45, 212, 191, 0.4);
+    box-shadow: 0 0 40px rgba(45, 212, 191, 0.1);
+  }
+}
